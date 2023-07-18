@@ -1,0 +1,7 @@
+BUILD Dockerfile USING THE COMMAND 
+
+docker build -t docker-sample Dockerfile .
+
+BUILD THE Dockerfile.multistage using the command
+
+docker build -t docker-sample:multistage Dockerfile.multistage .
