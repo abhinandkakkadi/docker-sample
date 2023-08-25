@@ -5,3 +5,10 @@ docker build -t docker-sample Dockerfile .
 BUILD THE Dockerfile.multistage using the command
 
 docker build -t docker-sample:multistage Dockerfile.multistage .
+
+
+volume is the preferred way of persisting data 
+
+docker volume create roach - create a volume named roach
+docker volume list - list all the volumes available 
+
