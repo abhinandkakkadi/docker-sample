@@ -1,0 +1,6 @@
+docker run -it abhinandkakkadi/sample sh
+
+ -it - stands for interactive terminal
+ sh  - shell  (Over write the default startup command as it is written in the end)
+
+ it goes directly into the working directory
