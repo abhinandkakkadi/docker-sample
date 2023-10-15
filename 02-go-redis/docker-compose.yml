@@ -1,0 +1,8 @@
+version: "3"
+services:
+  redis-server:
+    image: "redis"
+  go-app:
+    build: . #look for a Dockerfile in the current directory and build that
+    ports:
+      - "8080:8080"

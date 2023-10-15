@@ -1,0 +1,14 @@
+version: "3"
+services:
+  redis-server:
+    image: "redis"
+    restart: on-failure #mentions that only restart on failure. eg. should not restart om instace where exit status is 0s and all
+  go-app:
+    restart: always # when restarting the same container is used rather than a new container using the same image
+    build: . #look for a Dockerfile in the current directory and build that
+    ports:
+      - "8080:8080"
+# on failure can also be used in situation where we are running some worker process who wants to exit after
+# some work is done. in that sitation there is no point in restarting the server
+# aslo always can be used in situtation where a web application is run where we always need to ensure that it
+# is working.

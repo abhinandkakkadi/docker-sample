@@ -1,0 +1,14 @@
+If we want to rebuild the image and then create docker compose
+ - docker-compose up --build
+
+If we want to normally run docker compose type in 
+ - docker-compose up
+
+launch in background
+ - docker-compose up -d
+
+Stop containers  
+ - docker-compose down 
+ 
+status of docker-compose - ( it has to be called from the directory where the docker-compose file is present)
+ - docker-compose ps
