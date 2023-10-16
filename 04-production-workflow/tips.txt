@@ -1,0 +1,21 @@
+feature branch -> pull request -> master -> travis CI -> AWS hosting
+
+when a create a pull request to master travis CI take the code and run all
+the test and if the test is passed it is successfully merged to master branch 
+
+Then again travis CI takes the code from the master branch and run some tets and deploy it 
+to AWS elastic beanstalk
+
+
+ - When we are giving name like Dockerfile.dev 
+   we have to specify the name of the file using -f  
+   - docker build -f Dockerfile.dev 
+
+
+docker run -p 3000:3000 -v $(pwd):/app abhinandkakkadi/sample-prod -> whenever the container want's data inside
+the /app directory it directly looks into present working directory. 
+
+
+
+docker run -p 3000:3000 -v /app/go.sum -v $(pwd):/app <image-name> 
+the part where there is no colon, we are effectively saying that don't map this part, use this part from the container itself 
