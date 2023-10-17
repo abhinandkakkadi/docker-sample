@@ -5,14 +5,11 @@ import (
 	"text/template"
 )
 
-var tpl template.Template
-
-func init() {
-	
-}
+var tpl *template.Template
 
 func main() {
-	var tpl = template.Must(template.New("sample").ParseFiles("templates/index.html"))
+	
+  tpl = template.Must(template.ParseFiles("index.html"))
 	http.HandleFunc("/", index)
 	http.ListenAndServe(":8080", nil)
 
@@ -23,6 +20,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "GET" {
 		return
 	}
-
+	
 	tpl.ExecuteTemplate(w, "index.html", nil)
 }
