@@ -35,6 +35,6 @@ func TestIndex(t *testing.T) {
 	}
 
 	bytes.TrimSpace(body)
-	assert.Equal(t, string(body), "Hey this is a web application")
+	assert.Equal(t, string(body), "OK")
 
 }

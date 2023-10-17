@@ -19,3 +19,8 @@ the /app directory it directly looks into present working directory.
 
 docker run -p 3000:3000 -v /app/go.sum -v $(pwd):/app <image-name> 
 the part where there is no colon, we are effectively saying that don't map this part, use this part from the container itself 
+
+
+
+REPLACE THE DEFAULT STARTUP COMMAND OF RUNNING THE APPLICATION TO RUN THE TEST 
+docker run application go test ./...

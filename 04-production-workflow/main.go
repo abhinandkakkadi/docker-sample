@@ -9,7 +9,6 @@ var tpl *template.Template
 
 func main() {
 	
-  tpl = template.Must(template.ParseFiles("index.html"))
 	http.HandleFunc("/", index)
 	http.ListenAndServe(":8080", nil)
 
@@ -21,5 +20,5 @@ func index(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	
-	tpl.ExecuteTemplate(w, "index.html", nil)
+	w.Write([]byte("OK"))
 }
