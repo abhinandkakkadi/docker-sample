@@ -8,5 +8,12 @@ services:
     ports:
       - "3000:8080"
     volumes:
-      - /go.sum # Don't map this to pwd
       - .:/app # Map current folder to /app inside the container
+  # For tests service port mapping is not required as we don't have to use that in local environment
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - .:/app
+    command: ["go", "test", "./..."] #Overwrite the default command
